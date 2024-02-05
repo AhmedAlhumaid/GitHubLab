@@ -1,7 +1,6 @@
 public class Sorter {
     public static void main(String[] args) {
-        System.out.println("test the test branch for testing");
-
+        System.out.println("trying something");
     }
     public static void selectionSort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++) {
