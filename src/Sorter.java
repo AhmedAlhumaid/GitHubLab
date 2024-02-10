@@ -1,8 +1,13 @@
+import java.util.Arrays;
+
 public class Sorter {
     public static void main(String[] args) {
-        System.out.println("adding");
+        int[] arr = {4,5,2,4};
+       arr =  sort(arr);
+        System.out.println(Arrays.toString(arr));
+
     }
-    public static void selectionSort(int[] arr){
+    public static int[] selectionSort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++) {
             // Find the index of the minimum element in the unsorted part of the array
             int minIndex = i;
@@ -17,9 +22,10 @@ public class Sorter {
             arr[minIndex] = arr[i];
             arr[i] = temp;
         }
+        return arr;
     }
 
-    public static void insertionSort(int[] arr) {
+    public static int[] insertionSort(int[] arr) {
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
             int key = arr[i];
@@ -33,5 +39,10 @@ public class Sorter {
             }
             arr[j + 1] = key;
         }
+        return arr;
+    }
+    public static int[] sort(int[] arr){
+        int[] sortedArr = insertionSort(arr);
+        return sortedArr;
     }
 }
