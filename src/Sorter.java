@@ -42,7 +42,7 @@ public class Sorter {
         return arr;
     }
     public static int[] sort(int[] arr){
-        int[] sortedArr = insertionSort(arr);
+        int[] sortedArr = selectionSort(arr);
         return sortedArr;
     }
 }
